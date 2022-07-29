@@ -1,0 +1,7 @@
+{
+  "name": "devpath",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
