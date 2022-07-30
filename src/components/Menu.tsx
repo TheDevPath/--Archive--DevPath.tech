@@ -13,13 +13,12 @@ import {
 
 import { useLocation } from 'react-router-dom';
 import {
-  bookmarkOutline,
-  heartOutline,
-  heartSharp,
+  informationCircleOutline,
+  informationCircleSharp,
   homeOutline,
   homeSharp,
-  paperPlaneOutline,
-  paperPlaneSharp,
+  albumsOutline,
+  albumsSharp,
   logoSlack,
   logoDiscord,
 } from 'ionicons/icons';
@@ -44,18 +43,16 @@ const appPages: AppPage[] = [
   {
     title: 'Blog',
     url: '/page/Blog',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp,
+    iosIcon: albumsOutline,
+    mdIcon: albumsSharp,
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp,
+    title: 'Resources',
+    url: '/page/Resources',
+    iosIcon: informationCircleOutline,
+    mdIcon: informationCircleSharp,
   },
 ];
-
-const labels = ['Web Native', 'PWA', 'Web3', 'Games', 'Random'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -153,15 +150,6 @@ const Menu: React.FC = () => {
               Logout
             </IonButton>
           </IonItem>
-        </IonList>
-        <IonList id="labels-list">
-          <IonListHeader>Labels</IonListHeader>
-          {labels.map((label, index) => (
-            <IonItem lines="none" key={index}>
-              <IonIcon slot="start" icon={bookmarkOutline} />
-              <IonLabel>{label}</IonLabel>
-            </IonItem>
-          ))}
         </IonList>
       </IonContent>
     </IonMenu>
