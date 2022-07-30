@@ -9,6 +9,7 @@ import {
   IonMenuToggle,
   IonNote,
   IonButton,
+  IonImg,
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
@@ -25,6 +26,7 @@ import {
 import './Menu.css';
 import { useMoralis } from 'react-moralis';
 import { useEffect } from 'react';
+import logo from '../assets/logo.png';
 
 interface AppPage {
   url: string;
@@ -100,6 +102,10 @@ const Menu: React.FC = () => {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
+        <IonImg
+          src={logo}
+          style={{ maxWidth: 200, margin: 'auto', paddingTop: 20 }}
+        ></IonImg>
         <IonList id="inbox-list">
           <IonListHeader>Wallet Address:</IonListHeader>
           <IonNote> {user && user!.get('ethAddress')}</IonNote>
