@@ -1,0 +1,36 @@
+import {
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react';
+import ExploreContainer from '../components/ExploreContainer';
+
+const Resources: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+          <IonTitle>DevPath Resources</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+
+      <IonContent fullscreen>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">DevPath Resources</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <ExploreContainer name={'DevPath'} />
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Resources;

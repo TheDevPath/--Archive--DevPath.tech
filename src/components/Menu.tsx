@@ -44,13 +44,13 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Blog',
-    url: '/page/Blog',
+    url: '/Blog',
     iosIcon: albumsOutline,
     mdIcon: albumsSharp,
   },
   {
     title: 'Resources',
-    url: '/page/Resources',
+    url: '/Resources',
     iosIcon: informationCircleOutline,
     mdIcon: informationCircleSharp,
   },
