@@ -20,6 +20,8 @@ import {
   homeSharp,
   paperPlaneOutline,
   paperPlaneSharp,
+  logoSlack,
+  logoDiscord,
 } from 'ionicons/icons';
 import './Menu.css';
 import { useMoralis } from 'react-moralis';
@@ -127,14 +129,33 @@ const Menu: React.FC = () => {
             );
           })}
         </IonList>
-
+        <IonList>
+          <IonItem>
+            <IonButton
+              target="_blank"
+              href="https://join.slack.com/t/devpath/shared_invite/zt-4dbke6dz-HtwrvMOoKqLNhVF1qrnN~w"
+            >
+              <IonIcon slot="start" ios={logoSlack} md={logoSlack} />
+              DevPath Slack
+            </IonButton>
+          </IonItem>
+          <IonItem>
+            <IonButton target="_blank" href="https://discord.gg/snMw25v">
+              <IonIcon slot="start" ios={logoDiscord} md={logoDiscord} />
+              DevPath Discord
+            </IonButton>
+          </IonItem>
+          <IonItem>
+            <IonButton onClick={login}>Moralis Metamask Login</IonButton>
+          </IonItem>
+          <IonItem>
+            <IonButton onClick={logOut} disabled={isAuthenticating}>
+              Logout
+            </IonButton>
+          </IonItem>
+        </IonList>
         <IonList id="labels-list">
           <IonListHeader>Labels</IonListHeader>
-          <IonButton onClick={login}>Moralis Metamask Login</IonButton>
-          <hr />
-          <IonButton onClick={logOut} disabled={isAuthenticating}>
-            Logout
-          </IonButton>
           {labels.map((label, index) => (
             <IonItem lines="none" key={index}>
               <IonIcon slot="start" icon={bookmarkOutline} />
