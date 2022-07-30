@@ -30,6 +30,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Blog from './pages/Blog';
 import Resources from './pages/Resources';
+import LevelUp from './pages/LevelUp';
 
 setupIonicReact();
 
@@ -46,6 +47,7 @@ const App: React.FC = () => {
             <Route path="/home" exact={true} component={Home}></Route>
             <Route path="/blog" exact={true} component={Blog}></Route>
             <Route path="/resources" exact={true} component={Resources}></Route>
+            <Route path="/levelup" exact={true} component={LevelUp}></Route>
             <Route path="/page/:name" exact={true}>
               <Page />
             </Route>

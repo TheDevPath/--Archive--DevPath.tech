@@ -54,6 +54,12 @@ const appPages: AppPage[] = [
     iosIcon: informationCircleOutline,
     mdIcon: informationCircleSharp,
   },
+  {
+    title: '../',
+    url: '/LevelUp',
+    iosIcon: informationCircleOutline,
+    mdIcon: informationCircleSharp,
+  },
 ];
 
 const Menu: React.FC = () => {
