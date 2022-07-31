@@ -1,15 +1,7 @@
 import abi from '../utils/BuyMeACoffee.json';
 import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
-import {
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonMenuButton,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react';
+import { IonContent, IonTitle } from '@ionic/react';
 // import styles from '../styles/Home.module.css';
 
 export default function BuyMeCoffee() {
@@ -37,7 +29,7 @@ export default function BuyMeCoffee() {
       const { ethereum } = window;
 
       const accounts = await ethereum.request({ method: 'eth_accounts' });
-      console.log('accounts: ', accounts);
+      console.log('eth_accounts: ', accounts);
 
       if (accounts.length > 0) {
         const account = accounts[0];
@@ -97,6 +89,7 @@ export default function BuyMeCoffee() {
         // Clear the form fields.
         setName('');
         setMessage('');
+        console.log('form cleared');
       }
     } catch (error) {
       console.log(error);
@@ -110,6 +103,7 @@ export default function BuyMeCoffee() {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
+        console.log('signer: ', signer);
         const buyMeACoffee = new ethers.Contract(
           contractAddress,
           contractABI,
@@ -132,7 +126,6 @@ export default function BuyMeCoffee() {
     let buyMeACoffee;
     isWalletConnected();
     getMemos();
-
     // Create an event handler function for when someone sends
     // us a new memo.
     const onNewMemo = (from, timestamp, name, message) => {
@@ -164,7 +157,7 @@ export default function BuyMeCoffee() {
         buyMeACoffee.off('NewMemo', onNewMemo);
       }
     };
-  }, []);
+  }, [contractABI]);
 
   return (
     <>
