@@ -27,6 +27,7 @@ import './Menu.css';
 import { useMoralis } from 'react-moralis';
 import { useEffect } from 'react';
 import logo from '../assets/logo.png';
+import BuyMeCoffee from '../components/BuyMeCoffee';
 
 interface AppPage {
   url: string;
@@ -163,6 +164,7 @@ const Menu: React.FC = () => {
             </IonButton>
           </IonItem>
         </IonList>
+        <BuyMeCoffee />
       </IonContent>
     </IonMenu>
   );
