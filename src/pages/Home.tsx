@@ -13,7 +13,11 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
-import { flameOutline, pin, rocketOutline } from 'ionicons/icons';
+import {
+  codeWorkingOutline,
+  flameOutline,
+  rocketOutline,
+} from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 
 const Home: React.FC = () => {
@@ -100,7 +104,7 @@ const Home: React.FC = () => {
 
         <IonCard>
           <IonItem>
-            <IonIcon icon={flameOutline} slot="start" />
+            <IonIcon icon={codeWorkingOutline} slot="start" />
             <IonLabel>Top Tech Stacks for Web3!</IonLabel>
             <IonButton fill="outline" slot="end">
               View
