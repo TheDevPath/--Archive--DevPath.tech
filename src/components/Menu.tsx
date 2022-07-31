@@ -109,10 +109,7 @@ const Menu: React.FC = () => {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
-        <IonImg
-          src={logo}
-          style={{ maxWidth: 200, margin: 'auto', paddingTop: 20 }}
-        ></IonImg>
+        <IonImg src={logo} style={{ maxWidth: 80, margin: 'auto' }}></IonImg>
         <IonList id="inbox-list">
           <IonListHeader>Wallet Address:</IonListHeader>
           <IonNote> {user && user!.get('ethAddress')}</IonNote>

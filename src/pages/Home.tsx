@@ -6,6 +6,7 @@ import {
   IonContent,
   IonHeader,
   IonIcon,
+  IonImg,
   IonItem,
   IonLabel,
   IonMenuButton,
@@ -14,6 +15,7 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { flameOutline, rocketOutline, serverOutline } from 'ionicons/icons';
+import logo from '../assets/logo.png';
 
 const Home: React.FC = () => {
   return (
@@ -23,6 +25,11 @@ const Home: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
+          <IonImg
+            slot="start"
+            src={logo}
+            style={{ maxWidth: 80, margin: 5 }}
+          ></IonImg>
           <IonTitle>Welcome To DevPath</IonTitle>
         </IonToolbar>
       </IonHeader>
