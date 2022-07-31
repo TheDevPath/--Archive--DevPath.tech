@@ -13,13 +13,7 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
-import {
-  codeWorkingOutline,
-  flameOutline,
-  rocketOutline,
-  serverOutline,
-} from 'ionicons/icons';
-import ExploreContainer from '../components/ExploreContainer';
+import { flameOutline, rocketOutline, serverOutline } from 'ionicons/icons';
 
 const Home: React.FC = () => {
   return (
@@ -39,7 +33,6 @@ const Home: React.FC = () => {
             <IonTitle size="large">Welcome To DevPath</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={'DevPath'} />
 
         {/* Start page Content */}
         <IonCard>
