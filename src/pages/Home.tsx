@@ -72,6 +72,7 @@ const Home: React.FC = () => {
             </p>
           </IonCardContent>
         </IonCard>
+
         <IonCard>
           <IonItem>
             <IonIcon icon={flameOutline} slot="start" />
@@ -88,8 +89,40 @@ const Home: React.FC = () => {
               to find out from industry vetrans what they think will be next top
               tech that young devs should learn.
             </p>
-            <p></p>
-            <p></p>
+            <ul>
+              <li>Web3 Distributed Web</li>
+              <li>Blockchain</li>
+              <li>PWA Progressive Web Apps</li>
+              <li>3D</li>
+            </ul>
+          </IonCardContent>
+        </IonCard>
+
+        <IonCard>
+          <IonItem>
+            <IonIcon icon={flameOutline} slot="start" />
+            <IonLabel>Top Tech Stacks for Web3!</IonLabel>
+            <IonButton fill="outline" slot="end">
+              View
+            </IonButton>
+          </IonItem>
+
+          <IonCardContent>
+            <p>
+              Trying to figure out what a web3 tech stack looks like? I know I
+              went through the same thing there's a lot of new things coming out
+              fast and it's challenging to find some of it if you don't alrady
+              know what it's called. That's why in this article I'm going to
+              share all the fruits of my latest journey down the rabbit hole of
+              What's the best Web3 Stack Ready for Production and Scaling.
+            </p>
+            <ul>
+              <li>Moralis</li>
+              <li>Alchemy</li>
+              <li>Ethers.js</li>
+              <li>Hardhat</li>
+              <li>IPFS</li>
+            </ul>
           </IonCardContent>
         </IonCard>
       </IonContent>
