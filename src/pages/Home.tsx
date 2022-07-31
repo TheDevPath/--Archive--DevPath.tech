@@ -127,6 +127,9 @@ const Home: React.FC = () => {
               <li>Ethers.js</li>
               <li>Hardhat</li>
               <li>IPFS</li>
+              <li>Metamask</li>
+              <li>web3.js</li>
+              <li>thirdweb</li>
             </ul>
           </IonCardContent>
         </IonCard>
