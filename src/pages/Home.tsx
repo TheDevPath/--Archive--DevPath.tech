@@ -17,6 +17,7 @@ import {
   codeWorkingOutline,
   flameOutline,
   rocketOutline,
+  serverOutline,
 } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 
@@ -104,7 +105,7 @@ const Home: React.FC = () => {
 
         <IonCard>
           <IonItem>
-            <IonIcon icon={codeWorkingOutline} slot="start" />
+            <IonIcon icon={serverOutline} slot="start" />
             <IonLabel>Top Tech Stacks for Web3!</IonLabel>
             <IonButton fill="outline" slot="end">
               View
