@@ -73,7 +73,7 @@ const Home: React.FC = () => {
               you are good enough at that to decide you are bored, and this
               means such an expert there is no challenge left. Then you look at
               learning something different. So this is why you need to ask
-              yourself right from the satrt what aspect you are most excited by.
+              yourself right from the start what aspect you are most excited by.
             </p>
           </IonCardContent>
         </IonCard>

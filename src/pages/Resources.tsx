@@ -7,7 +7,6 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 
 const Resources: React.FC = () => {
   return (
@@ -27,7 +26,7 @@ const Resources: React.FC = () => {
             <IonTitle size="large">DevPath Resources</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={'DevPath'} />
+        <h2>Resources</h2>
       </IonContent>
     </IonPage>
   );
