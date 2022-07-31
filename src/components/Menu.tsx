@@ -27,7 +27,7 @@ import './Menu.css';
 import { useMoralis } from 'react-moralis';
 import { useEffect } from 'react';
 import logo from '../assets/logo.png';
-import BuyMeCoffee from '../components/BuyMeCoffee';
+import BuyMeCrypto from '../components/BuyMeCrypto';
 
 interface AppPage {
   url: string;
@@ -65,54 +65,13 @@ const appPages: AppPage[] = [
 
 const Menu: React.FC = () => {
   const location = useLocation();
-  const {
-    authenticate,
-    isAuthenticated,
-    isAuthenticating,
-    user,
-    account,
-    logout,
-  } = useMoralis();
-
-  useEffect(() => {
-    // console.log('authenticate: ', authenticate);
-    console.log('isAuthenticated: ', isAuthenticated);
-    console.log('isAuthenticating: ', isAuthenticating);
-    console.log('user: ', user);
-    console.log('account: ', account);
-    // console.log('logout: ', logout);
-
-    return () => {};
-  }, [isAuthenticated, isAuthenticating, user, account]);
-
-  const login = async () => {
-    if (!isAuthenticated) {
-      await authenticate({ signingMessage: 'Log in using Moralis' })
-        .then(function (user) {
-          console.log('logged in user:', user);
-          // console.log(user!.get('ethAddress'));
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    } else if (isAuthenticated) {
-      console.log('already logged in');
-      console.log(user!.get('ethAddress'));
-    }
-  };
-
-  const logOut = async () => {
-    await logout();
-    console.log('logged out');
-  };
+  const { isAuthenticating, user } = useMoralis();
 
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonImg src={logo} style={{ maxWidth: 80, margin: 'auto' }}></IonImg>
         <IonList id="inbox-list">
-          <IonListHeader>Wallet Address:</IonListHeader>
-          <IonNote> {user && user!.get('ethAddress')}</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -152,16 +111,8 @@ const Menu: React.FC = () => {
               DevPath Discord
             </IonButton>
           </IonItem>
-          <IonItem>
-            <IonButton onClick={login}>Moralis Metamask Login</IonButton>
-          </IonItem>
-          <IonItem>
-            <IonButton onClick={logOut} disabled={isAuthenticating}>
-              Logout
-            </IonButton>
-          </IonItem>
         </IonList>
-        <BuyMeCoffee />
+        <BuyMeCrypto />
       </IonContent>
     </IonMenu>
   );
