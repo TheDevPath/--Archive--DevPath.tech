@@ -12,7 +12,7 @@ import {
 } from '@ionic/react';
 // import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function BuyMeCoffee() {
   // Contract Address & ABI
   const contractAddress = '0x2179329a266821DB75C19Bf2EA3a77Ae292e09df';
   const contractABI = abi.abi;
@@ -167,22 +167,10 @@ export default function Home() {
   }, []);
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>Buy Me a Coffee</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+    <>
+      <IonTitle>Buy Me Coffee</IonTitle>
 
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+      <IonContent>
         <div>
           <meta name="description" content="Tipping site" />
           <link rel="icon" href="/favicon.ico" />
@@ -191,7 +179,7 @@ export default function Home() {
               <div>
                 <form>
                   <div className="formgroup">
-                    <label>Name</label>
+                    <label>From</label>
                     <br />
                     <input
                       id="name"
@@ -248,6 +236,6 @@ export default function Home() {
             })}
         </div>
       </IonContent>
-    </IonPage>
+    </>
   );
 }
