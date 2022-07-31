@@ -1,12 +1,19 @@
 import {
+  IonButton,
   IonButtons,
+  IonCard,
+  IonCardContent,
   IonContent,
   IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
   IonMenuButton,
   IonPage,
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
+import { flameOutline, pin, rocketOutline } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 
 const Home: React.FC = () => {
@@ -28,6 +35,63 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name={'DevPath'} />
+
+        {/* Start page Content */}
+        <IonCard>
+          <IonItem>
+            <IonIcon icon={rocketOutline} slot="start" />
+            <IonLabel>Quick Tips to Help Begginers Start a New Path</IonLabel>
+            <IonButton fill="outline" slot="end">
+              View
+            </IonButton>
+          </IonItem>
+
+          <IonCardContent>
+            <p>
+              We all had the same questions no matter when or what you learn to
+              code there is so many options what do I start with?
+            </p>
+            <p>
+              First question you have to ask yourself is what do you enjoy
+              doing?
+            </p>
+            <p>
+              I'll elaborate on this point to help give it more relavance. Your
+              on DevPath so clearly you have some interest in tech and possibly
+              building apps or games or something in the digital world. The key
+              perspective of the question here is do you want to draw or animate
+              or do you want to program the physics engines in video games.
+              Maybe you want to get into crypto, web3, Defi, create your own
+              DAO. There are a lot of aspects of development that can be focused
+              on as specializations. I suggest you find a specialization that
+              interests you and get as good as possible at that one thing. Once
+              you are good enough at that to decide you are bored, and this
+              means such an expert there is no challenge left. Then you look at
+              learning something different. So this is why you need to ask
+              yourself right from the satrt what aspect you are most excited by.
+            </p>
+          </IonCardContent>
+        </IonCard>
+        <IonCard>
+          <IonItem>
+            <IonIcon icon={flameOutline} slot="start" />
+            <IonLabel>Bleeding Edge Tech to Learn Now!</IonLabel>
+            <IonButton fill="outline" slot="end">
+              View
+            </IonButton>
+          </IonItem>
+
+          <IonCardContent>
+            <p>
+              Trying to figure out what the next hot new tech to blow up is
+              going to be but don't even know whats used now! check this section
+              to find out from industry vetrans what they think will be next top
+              tech that young devs should learn.
+            </p>
+            <p></p>
+            <p></p>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
