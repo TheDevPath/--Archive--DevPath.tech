@@ -1,7 +1,7 @@
-import { IonFab, IonFabButton, IonIcon, IonNote, IonTitle } from '@ionic/react';
+import { IonFab, IonFabButton, IonIcon } from '@ionic/react';
 import { logInOutline, logOutOutline, walletOutline } from 'ionicons/icons';
 import { useEffect } from 'react';
-import { useMoralis } from 'react-moralis';
+import { useMoralis, useWeb3Transfer } from 'react-moralis';
 
 const BuyMeCrypto: React.FC = () => {
   const {
@@ -11,6 +11,7 @@ const BuyMeCrypto: React.FC = () => {
     user,
     account,
     logout,
+    Moralis,
   } = useMoralis();
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const BuyMeCrypto: React.FC = () => {
     // console.log('isAuthenticating: ', isAuthenticating);
     // console.log('user: ', user);
     // console.log('account: ', account);
-    // // console.log('logout: ', logout);
+    // console.log('logout: ', logout);
 
     return () => {};
   }, [isAuthenticated, isAuthenticating, user, account]);
@@ -43,6 +44,12 @@ const BuyMeCrypto: React.FC = () => {
     });
   };
 
+  const { fetch, error, isFetching } = useWeb3Transfer({
+    type: 'native',
+    amount: Moralis.Units.ETH(0.005),
+    receiver: '0xE9B2454a59f4989677196BBf4633eC688EC6b658',
+  });
+
   return (
     <>
       <h4>Connected Wallet Address:</h4>
@@ -53,8 +60,14 @@ const BuyMeCrypto: React.FC = () => {
           <IonIcon icon={logInOutline} onClick={moralisLogin} />
         </IonFabButton>
       </IonFab>
+      <IonFab vertical="bottom" horizontal="center" slot="fixed">
+        <p>Send</p>
+        <IonFabButton disabled={isFetching}>
+          <IonIcon icon={walletOutline} onClick={() => fetch()} />
+        </IonFabButton>
+      </IonFab>
       <IonFab vertical="bottom" horizontal="end" slot="fixed">
-        <p>Sign Out</p>
+        <p>Out</p>
         <IonFabButton>
           <IonIcon icon={logOutOutline} onClick={moralisLogout} />
         </IonFabButton>
