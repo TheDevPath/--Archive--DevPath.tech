@@ -130,6 +130,7 @@ const Home: React.FC = () => {
               <li>Metamask</li>
               <li>web3.js</li>
               <li>thirdweb</li>
+              <li>OpenZeppelin</li>
             </ul>
           </IonCardContent>
         </IonCard>

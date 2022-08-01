@@ -4,10 +4,8 @@ import {
   IonItem,
   IonLabel,
   IonList,
-  IonListHeader,
   IonMenu,
   IonMenuToggle,
-  IonNote,
   IonButton,
   IonImg,
 } from '@ionic/react';
@@ -24,8 +22,6 @@ import {
   logoDiscord,
 } from 'ionicons/icons';
 import './Menu.css';
-import { useMoralis } from 'react-moralis';
-import { useEffect } from 'react';
 import logo from '../assets/logo.png';
 import BuyMeCrypto from '../components/BuyMeCrypto';
 
@@ -65,7 +61,6 @@ const appPages: AppPage[] = [
 
 const Menu: React.FC = () => {
   const location = useLocation();
-  const { isAuthenticating, user } = useMoralis();
 
   return (
     <IonMenu contentId="main" type="overlay">
