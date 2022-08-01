@@ -1,9 +1,23 @@
-import { IonFab, IonFabButton, IonIcon } from '@ionic/react';
+import {
+  IonContent,
+  IonFab,
+  IonFabButton,
+  IonFabList,
+  IonIcon,
+  IonInput,
+  IonItem,
+  IonItemDivider,
+  IonLabel,
+  IonList,
+} from '@ionic/react';
 import { logInOutline, logOutOutline, walletOutline } from 'ionicons/icons';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useMoralis, useWeb3Transfer } from 'react-moralis';
 
 const BuyMeCrypto: React.FC = () => {
+  const [name, setName] = useState<string>();
+  const [message, setMessage] = useState<string>();
+  const [number, setNumber] = useState<number>();
   const {
     authenticate,
     isAuthenticating,
@@ -42,6 +56,38 @@ const BuyMeCrypto: React.FC = () => {
     <>
       <h4>Connected Wallet Address:</h4>
       <p> {user && account}</p>
+      <IonContent>
+        <IonList>
+          <IonItemDivider color="primary">From:</IonItemDivider>
+          <IonItem>
+            <IonInput
+              value={name}
+              placeholder="Anonymous"
+              onIonChange={(e) => setName(e.detail.value!)}
+              clearInput
+            ></IonInput>
+          </IonItem>
+          <IonItemDivider color="primary">Message:</IonItemDivider>
+          <IonItem>
+            <IonInput
+              value={message}
+              placeholder="Anonymous"
+              onIonChange={(e) => setMessage(e.detail.value!)}
+              clearInput
+            ></IonInput>
+          </IonItem>
+
+          <IonItemDivider color="primary">Amount</IonItemDivider>
+          <IonItem>
+            <IonInput
+              type="number"
+              value={number}
+              placeholder="Enter Number"
+              onIonChange={(e) => setNumber(parseInt(e.detail.value!, 10))}
+            ></IonInput>
+          </IonItem>
+        </IonList>
+      </IonContent>
       <IonFab vertical="bottom" horizontal="start" slot="fixed">
         <p>Sign In</p>
         <IonFabButton>
