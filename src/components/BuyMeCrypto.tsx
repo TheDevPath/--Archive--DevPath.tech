@@ -14,19 +14,7 @@ const BuyMeCrypto: React.FC = () => {
     Moralis,
   } = useMoralis();
 
-  useEffect(() => {
-    // console.log('authenticate: ', authenticate);
-    // console.log('isAuthenticated: ', isAuthenticated);
-    // console.log('isAuthenticating: ', isAuthenticating);
-    // console.log('user: ', user);
-    // console.log('account: ', account);
-    // console.log('logout: ', logout);
-
-    return () => {};
-  }, [isAuthenticated, isAuthenticating, user, account]);
-
   const moralisLogin = async () => {
-    console.log('FAB Wallet Button Clicked');
     await authenticate({ signingMessage: 'Connect to BuyMeCrypto' })
       .then((user) => {
         console.log('BuyMeCrypto > user: ', user);
@@ -53,7 +41,7 @@ const BuyMeCrypto: React.FC = () => {
   return (
     <>
       <h4>Connected Wallet Address:</h4>
-      <p> {user && user!.get('ethAddress')}</p>
+      <p> {user && account}</p>
       <IonFab vertical="bottom" horizontal="start" slot="fixed">
         <p>Sign In</p>
         <IonFabButton>
