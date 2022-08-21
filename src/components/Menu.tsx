@@ -20,6 +20,8 @@ import {
   albumsSharp,
   logoSlack,
   logoDiscord,
+  stopwatchSharp,
+  stopwatchOutline,
 } from 'ionicons/icons';
 import './Menu.css';
 import logo from '../assets/logo.png';
@@ -38,6 +40,12 @@ const appPages: AppPage[] = [
     url: '/Home',
     iosIcon: homeOutline,
     mdIcon: homeSharp,
+  },
+  {
+    title: 'Day One',
+    url: '/DayOne',
+    iosIcon: stopwatchOutline,
+    mdIcon: stopwatchSharp,
   },
   {
     title: 'Blog',
@@ -107,7 +115,7 @@ const Menu: React.FC = () => {
             </IonButton>
           </IonItem>
         </IonList>
-        <BuyMeCrypto />
+        {/* <BuyMeCrypto /> */}
       </IonContent>
     </IonMenu>
   );
