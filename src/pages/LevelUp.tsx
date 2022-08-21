@@ -49,6 +49,21 @@ const LevelUp: React.FC = () => {
             <p>Card Content</p>
           </IonCardContent>
         </IonCard>
+
+        {/* advanced topics */}
+        <IonCard>
+          <IonItem>
+            <IonIcon icon={rocketOutline} slot="start" />
+            <IonCardTitle>Advanced Topics to Level Up ../</IonCardTitle>
+            <IonButton fill="outline" slot="end">
+              View
+            </IonButton>
+          </IonItem>
+
+          <IonCardContent>
+            <p>Card Content</p>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
