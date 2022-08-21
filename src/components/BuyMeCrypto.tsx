@@ -46,6 +46,13 @@ const BuyMeCrypto: React.FC = () => {
     });
   };
 
+  const sendEth = () => {
+    fetch().then((res) => {
+      console.log('trans response: ', res);
+    });
+    console.log('sending ETH... ');
+  };
+
   const { fetch, error, isFetching } = useWeb3Transfer({
     type: 'native',
     amount: Moralis.Units.ETH(0.005),
@@ -97,7 +104,7 @@ const BuyMeCrypto: React.FC = () => {
       <IonFab vertical="bottom" horizontal="center" slot="fixed">
         <p>Send</p>
         <IonFabButton disabled={isFetching}>
-          <IonIcon icon={walletOutline} onClick={() => fetch()} />
+          <IonIcon icon={walletOutline} onClick={sendEth} />
         </IonFabButton>
       </IonFab>
       <IonFab vertical="bottom" horizontal="end" slot="fixed">
