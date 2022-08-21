@@ -1,12 +1,19 @@
 import {
+  IonButton,
   IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardTitle,
   IonContent,
   IonHeader,
+  IonIcon,
+  IonItem,
   IonMenuButton,
   IonPage,
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
+import { rocketOutline } from 'ionicons/icons';
 
 const LevelUp: React.FC = () => {
   return (
@@ -27,6 +34,21 @@ const LevelUp: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <h2>../ LevelUp</h2>
+        <IonCard>
+          <IonItem>
+            <IonIcon icon={rocketOutline} slot="start" />
+            <IonCardTitle>
+              Short Tutorials to Level Up ../ your tech skills.
+            </IonCardTitle>
+            <IonButton fill="outline" slot="end">
+              View
+            </IonButton>
+          </IonItem>
+
+          <IonCardContent>
+            <p>Card Content</p>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
