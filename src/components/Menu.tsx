@@ -22,6 +22,7 @@ import {
   logoDiscord,
   stopwatchSharp,
   stopwatchOutline,
+  logoYoutube,
 } from 'ionicons/icons';
 import './Menu.css';
 import logo from '../assets/logo.png';
@@ -112,6 +113,15 @@ const Menu: React.FC = () => {
             <IonButton target="_blank" href="https://discord.gg/snMw25v">
               <IonIcon slot="start" ios={logoDiscord} md={logoDiscord} />
               DevPath Discord
+            </IonButton>
+          </IonItem>
+          <IonItem>
+            <IonButton
+              target="_blank"
+              href="https://www.youtube.com/channel/UCpprazufqp6UCSqwCv2ua6g"
+            >
+              <IonIcon slot="start" ios={logoYoutube} md={logoYoutube} />
+              DevPath Youtube
             </IonButton>
           </IonItem>
         </IonList>
