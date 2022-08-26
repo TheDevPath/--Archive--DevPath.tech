@@ -89,6 +89,7 @@ const Menu: React.FC = () => {
                   detail={false}
                 >
                   <IonIcon
+                    color="dark"
                     slot="start"
                     ios={appPage.iosIcon}
                     md={appPage.mdIcon}
@@ -105,22 +106,42 @@ const Menu: React.FC = () => {
               target="_blank"
               href="https://join.slack.com/t/devpath/shared_invite/zt-4dbke6dz-HtwrvMOoKqLNhVF1qrnN~w"
             >
-              <IonIcon slot="start" ios={logoSlack} md={logoSlack} />
+              <IonIcon
+                color="dark"
+                slot="start"
+                ios={logoSlack}
+                md={logoSlack}
+              />
               DevPath Slack
             </IonButton>
           </IonItem>
           <IonItem>
-            <IonButton target="_blank" href="https://discord.gg/snMw25v">
-              <IonIcon slot="start" ios={logoDiscord} md={logoDiscord} />
+            <IonButton
+              color={'tertiary'}
+              target="_blank"
+              href="https://discord.gg/snMw25v"
+            >
+              <IonIcon
+                color="dark"
+                slot="start"
+                ios={logoDiscord}
+                md={logoDiscord}
+              />
               DevPath Discord
             </IonButton>
           </IonItem>
           <IonItem>
             <IonButton
+              color={'danger'}
               target="_blank"
               href="https://www.youtube.com/channel/UCpprazufqp6UCSqwCv2ua6g"
             >
-              <IonIcon slot="start" ios={logoYoutube} md={logoYoutube} />
+              <IonIcon
+                color="dark"
+                slot="start"
+                ios={logoYoutube}
+                md={logoYoutube}
+              />
               DevPath Youtube
             </IonButton>
           </IonItem>
