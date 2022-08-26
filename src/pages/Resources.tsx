@@ -33,7 +33,6 @@ const Resources: React.FC = () => {
             <IonTitle size="large">DevPath Resources</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <h2>Resources</h2>
         <IonCard>
           <IonItem>
             <IonIcon icon={rocketOutline} slot="start" />
