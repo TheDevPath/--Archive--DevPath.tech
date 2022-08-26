@@ -33,7 +33,6 @@ const Blog: React.FC = () => {
             <IonTitle size="large">DevPath Blog</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <h2>DevPath / Blog</h2>
         <IonCard>
           <IonItem>
             <IonIcon icon={rocketOutline} slot="start" />
