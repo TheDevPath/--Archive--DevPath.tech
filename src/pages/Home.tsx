@@ -185,17 +185,33 @@ const Home: React.FC = () => {
               share all the fruits of my latest journey down the rabbit hole of
               What's the best Web3 Stack Ready for Production and Scaling.
             </p>
+            <p>Let's start with a couple options in each category.</p>
+            <hr />
+            <h3>Development Tools</h3>
+            <ul>
+              <li>Hardhat</li>
+              <li>TruffleSuite</li>
+              <li>OpenZeppelin</li>
+              <li>Web3.js</li>
+              <li>Ethers.js</li>
+            </ul>
+            <h3>BlockChain API + SDK Providers</h3>
             <ul>
               <li>Moralis</li>
               <li>Alchemy</li>
-              <li>Ethers.js</li>
-              <li>Hardhat</li>
-              <li>IPFS</li>
-              <li>Metamask</li>
-              <li>web3.js</li>
-              <li>thirdweb</li>
-              <li>OpenZeppelin</li>
+              <li>Thirdweb</li>
+              <li>Infura</li>
               <li>Chainlink</li>
+            </ul>
+            <h3>Wallet</h3>
+            <ul>
+              <li>Metamask</li>
+              <li>Coinbase</li>
+            </ul>
+            <h3>Decentralized Storage</h3>
+            <ul>
+              <li>IPFS</li>
+              <li>Filecoin</li>
             </ul>
           </IonCardContent>
         </IonCard>
